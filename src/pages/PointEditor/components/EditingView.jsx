@@ -10,6 +10,7 @@ const EditingView = () => {
   const handleDownload = () => {
     data.lastUpdated = getMoscowTime();
     // Преобразование объекта data в строку JSON
+    data.points = data.points.filter(p => p.title && p.description)
     const jsonString = JSON.stringify(data);
     // Создание blob объекта
     const blob = new Blob([jsonString], { type: "application/json" });

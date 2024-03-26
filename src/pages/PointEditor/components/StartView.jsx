@@ -27,9 +27,7 @@ const StartView = () => {
             json.points &&
             json.initLocation &&
             Array.isArray(json.points) &&
-            json.points.every(
-              (point) => point.id && point.title && point.description,
-            )
+            json.points.every((point) => point.id)
           )
         ) {
           throw new Error("Файл не содержит необходимые поля в объектах.");
