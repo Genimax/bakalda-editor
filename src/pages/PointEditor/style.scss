@@ -1,0 +1,238 @@
+@import "../../styles/variables.scss";
+
+.main-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 50px;
+  width: 130px;
+}
+
+.center-container {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.editing-container {
+  padding: 30px 35px;
+  border-radius: 15px;
+  width: 55%;
+  background-color: $light-grey-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-container {
+  margin-top: 50px;
+  position: relative;
+  min-width: 40vw;
+  background-color: $grey-background;
+  border-radius: 17px;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: $dark-grey-text;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .upload-picture {
+    width: 150px;
+    cursor: pointer;
+    transition: scale 0.2s ease-out;
+  }
+
+  .upload-picture:hover {
+    scale: 1.05;
+  }
+}
+
+.points-container {
+  width: 100%;
+  overflow-y: auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 70vh;
+  min-height: 100px;
+}
+
+.points-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px; /* Ширина скроллбара */
+}
+
+.points-container::-webkit-scrollbar-track {
+  -webkit-appearance: none;
+  width: 8px; /* Ширина скроллбара */
+  background: #dadada;
+  border-radius: 3px;
+}
+
+.points-container::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(139, 139, 139, 0.5); /* Цвет скроллбара */
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); /* Тень скроллбара */
+}
+
+.point-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: $grey-background;
+  margin-bottom: 15px;
+
+  h3 {
+    color: $blue-text-main;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    color: $grey-text;
+  }
+}
+
+.closed {
+  cursor: pointer;
+}
+
+.opened {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.point-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .text-long-input {
+    width: 200px;
+    border-bottom: 1px solid $dark-grey-text;
+    color: $dark-grey-text;
+    text-align: center;
+  }
+
+  .file-name {
+    width: 200px;
+    height: 20px;
+    border-bottom: 1px solid $dark-grey-text;
+    color: $dark-grey-text;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .double-input {
+    display: flex;
+    gap: 10px;
+    .text-short-input {
+      width: 95px;
+      border-bottom: 1px solid $dark-grey-text;
+      color: $dark-grey-text;
+      text-align: center;
+    }
+  }
+}
+.description {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 300px;
+    padding: 10px 30px;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: left;
+    vertical-align: top;
+    color: $grey-text;
+    outline: none;
+    margin-bottom: 10px;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-add-point {
+  text-align: center;
+  color: $blue-text-main;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.button-download {
+  color: white;
+  padding: 5px 15px;
+  background-color: $blue-text-main;
+  font-weight: 700;
+  font-size: 21px;
+  border-radius: 15px;
+}
+
+.delete-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50px;
+  height: 30px;
+}
+
+.pack-up {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-weight: 800;
+
+  img {
+    width: 25px;
+  }
+}

@@ -1,0 +1,6 @@
+export const STAGES_ENUM = {
+  START: "START",
+  LOADING: "LOADING",
+  EDITING: "EDITING",
+  EXPORT: "EXPORT",
+};
